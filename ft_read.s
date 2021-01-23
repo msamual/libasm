@@ -10,11 +10,8 @@ _ft_read:
 			ret
 
 return_error:
-			push	r9
 			push	rax
-			pop		r9
 			call	___error
-			mov		[rax],	r9
+			pop		qword [rax]
 			mov		rax,	-1
-			pop		r9
 			ret

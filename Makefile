@@ -6,7 +6,7 @@
 #    By: msamual <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/21 15:13:59 by msamual           #+#    #+#              #
-#    Updated: 2021/01/22 18:54:39 by msamual          ###   ########.fr        #
+#    Updated: 2021/01/23 13:03:18 by msamual          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ SRCS		=	ft_strlen.s \
 				ft_strdup.s
 
 OBJS		=	$(SRCS:.s=.o)
-BONUS_SRCS	=	ft_atoi_base_bonus.s ft_list_size_bonus.s ft_list_push_front_bonus.s \
-				ft_list_remove_if_bonus.s ft_list_sort_bonus.s
+BONUS_SRCS	=	ft_atoi_base_bonus.s
 BONUS_OBJS	=	$(BONUS_SRCS:.s=.o)
 
 NA			=	nasm

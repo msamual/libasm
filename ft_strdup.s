@@ -7,25 +7,19 @@ extern	_ft_strcpy
 	global	_ft_strdup
 
 _ft_strdup:
-			push	r9
-			push	rsi
+			push	rdi
 			call	_ft_strlen
 			inc		rax
-			push	rdi
 			mov		rdi,	rax
 			call	_malloc
+			cmp		rax,	0
 			jz		return_error
-			pop		r9
+			pop		rdi
+			mov		rsi,	rdi
 			mov		rdi,	rax
-			mov		rsi,	r9
 			call	_ft_strcpy
-			mov		rdi, rax
-			pop		rsi
-			pop		r9
 			ret
 
 return_error:
-			xor		rax,	rax
-			pop		rsi
-			pop		r9
+			mov		rax,	0;
 			ret
