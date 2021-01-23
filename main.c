@@ -19,11 +19,8 @@
 
 int		main()
 {
-	char	*str = malloc(15);
-	char	*src = "Hello90";
-	int		fd = open("test.txt", O_RDWR);
-
-	printf("fd = %d write = %d errno = %d\n", fd, ft_read(fd, str, 12), errno);
-	printf("%s\n", str);
+	char *src = "\xff\xff";
+	char *str = "\xff";
+	printf("cmp = %zd\n", ft_strcmp(src, str));
 	return (0);
 }

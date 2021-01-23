@@ -14,13 +14,14 @@ loop:
 			movsx	rdx, byte [rdi]
 			movsx	rcx, byte [rsi]
 			cmp		rdx, rcx
-			jnz		return
+			jne		return
 			inc		rdi
 			inc		rsi
 			jmp		loop
 
 return:
-			mov		rax, rdx
+			movsx	rax, byte [rdi]
+			movsx	rcx, byte [rsi]
 			sub		rax, rcx
 			pop		rcx
 			pop		rdx

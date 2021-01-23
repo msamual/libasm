@@ -10,8 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	ft_putstr.s \
-				ft_strlen.s \
+SRCS		=	ft_strlen.s \
 				ft_strcpy.s \
 				ft_strcmp.s \
 				ft_write.s \

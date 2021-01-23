@@ -14,14 +14,15 @@
 # define LIBASM_H
 
 # include <errno.h>
+# include <stdlib.h>
+# include <string.h>
 
-void	ft_putchar(char c);
-int		ft_putstr(char *str);
-int		ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 char	*ft_strcpy(char *dst, const char *src);
-int		ft_strcmp(const char *s1, const char *s2);
+ssize_t	ft_strcmp(const char *s1, const char *s2);
 int		ft_write(int fildes, const void *buf, int nbyte);
 int		ft_read(int fildes, const void *buf, int nbyte);
+char	*ft_strdup(const char *s1);
 
 
 #endif
